@@ -1,0 +1,19 @@
+{
+  "name": "pulsar-python-vprof",
+  "main": "./lib/main.js",
+  "version": "0.1.0",
+  "description": "Python line profiler using vprof",
+  "repository": "https://github.com/mzivic7/pulsar-python-vprof",
+  "license": "GPL-3.0",
+  "bugs": "https://github.com/mzivic7/pulsar-python-vprof/issues",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "keywords": [
+    "python",
+    "profiling"
+  ],
+  "activationCommands": {
+    "atom-workspace": "vprof:toggle"
+  }
+}
