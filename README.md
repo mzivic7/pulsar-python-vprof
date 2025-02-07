@@ -18,4 +18,4 @@ After the results are generated, they can be toggled in Pulsar editor gutter wit
 `vprof:toggle` or with default keybinding `Ctrl-Shift-P`.
 
 ### Screenshots
-![vprof screenshot](https://github.com/mzivic7/pulsar-python-vprof/.github/screenshots/01.png?raw=true)
+![vprof screenshot](https://raw.githubusercontent.com/mzivic7/pulsar-python-vprof/refs/heads/main/.github/screenshots/01.png)
