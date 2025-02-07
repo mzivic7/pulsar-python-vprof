@@ -33,6 +33,7 @@ for file in heatmaps:
     exec_counts = []
     exec_times = []
     total_times = []
+    longest_line = ""
 
     # expecting exec_count to have same len as heatmap
     for linenum, exec_time_raw in heatmap.items():
@@ -54,18 +55,23 @@ for file in heatmaps:
         ])
 
     values = (exec_counts, exec_times, total_times)[color_select]
-    # create colors separately
+
+    # create colors and find longest line
     for num, line in enumerate(file_stats):
         value = values[num]
         color_amount = 255 * (1 - e ** (-k * value / max(values)))
         color = [color_amount, 255 - color_amount, 0]
         line.append(color)
+        if len(line[1]) > len(longest_line):
+            longest_line = line[1]
+
     stats.append({
         "file_path": filename,
         "stats": file_stats,
+        "longest": longest_line,
     })
 
 # output to stdout
-print(f"DATA_START{json.dumps(stats)}DATA_END")
+print(json.dumps(stats))
 sys.stdout.flush()
 sys.exit()
