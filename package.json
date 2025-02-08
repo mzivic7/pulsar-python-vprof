@@ -1,7 +1,7 @@
 {
   "name": "pulsar-python-vprof",
   "main": "./lib/main.js",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Show vprof Python profiling results in gutter",
   "repository": "https://github.com/mzivic7/pulsar-python-vprof",
   "license": "GPL-3.0",
